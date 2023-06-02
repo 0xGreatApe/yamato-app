@@ -1,6 +1,7 @@
 # Yamato Appp
 
-This app builds on the `YamatoTokenizedBallot.sol` and incorporates a full stack application that allows the user to do the following: 
+This app builds on the `YamatoTokenizedBallot.sol` and incorporates a full stack application that allows the user to do the following:
+
 - Mint voting tokens
 - Delegating voting power
 - Checking vote power
@@ -20,12 +21,21 @@ Yamato refers to the ancient historical period and clan in Japan, often associat
 
 # File Structure
 
- 
-
-Scripts:
+# Functions required to be built:
 
 Single POST method:
 Request voting tokens from API passing my address
 (Optional) Pass data and signature as well
 Use these tokens to interact with the tokenized ballot
 All other interactions must be made directly on-chain
+
+# Usage
+
+Run the frontend
+
+> cd frontend && npm run dev
+
+# References
+
+- Based on (Alchemy project)[https://github.com/alchemyplatform/create-web3-dapp]
+- More docs on setup (here)[https://docs.alchemy.com/docs/create-web3-dapp-quickstart]
