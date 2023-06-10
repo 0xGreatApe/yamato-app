@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+  /* background: #1b263b; */
+  background: linear-gradient(to top left, #000, #1b263b);
+
+  @media (--mobile) {
+    min-height: initial;
+  }
+}
+
+.main {
+  flex: 1 0;
+  /* background-image: url('../../../public/football-stadium-shiny-lights-view-field-grass-turf-nobody-playground-tribunes-game-fans-background-130634784.jpeg'); */
+  /* background-image: url('../../../public/background.jpeg'); */
+  /* background: linear-gradient(to top left, var(--black), var(--secondaryDark)); */
+  /* background: #1b263b; */
+  background: linear-gradient(to top left, #000, #1b263b);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: fixed;
+  padding: 0 0 4rem;
+  z-index: -1;
+
+  @media (--mobile) {
+    padding: 0;
+  }
+}
+
+.dashboard {
+  flex: 1 0;
+  /* background-image: url('../../../public/football-stadium-shiny-lights-view-field-grass-turf-nobody-playground-tribunes-game-fans-background-130634784.jpeg'); */
+  /* background-image: url('../../../public/background.jpeg'); */
+  /* background: linear-gradient(to top left, var(--black), var(--secondaryDark)); */
+  /* background: #1b263b; */
+  background: linear-gradient(to top left, #000, #1b263b);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: fixed;
+  padding: 0 0 4rem;
+
+  @media (--mobile) {
+    padding: 0;
+  }
+}
