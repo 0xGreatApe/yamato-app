@@ -4,6 +4,7 @@ import Container from "../Container/Container";
 import Footer from "../Navigation/Footer/Footer";
 import Header from "../Navigation/Header/Header";
 import React from "react";
+import styles from "./Layout.module.css";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -14,19 +15,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <title>Yamato Voting</title>
       </Head>
       {/* this is the whole screen background*/}
-      <Flex
-        flex="1 0"
-        bgColor="#13293d"
-        bgSize="cover"
-        bgRepeat="no-repeat"
-        bgPosition="center-top"
-        bgAttachment="fixed"
-        p="0 0 4 0rem"
-        zIndex="-1"
-      >
+      <div className={styles.flex_background}>
+        <Header />
         <Container>
-          <Header />
-          <Flex direction="column" minH="85vh" textAlign="center">
+          <Flex direction="column" minH="87vh" textAlign="center">
             <Box
               bg="transparent"
               backgroundSize="cover"
@@ -38,7 +30,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </Flex>
           <Footer />
         </Container>
-      </Flex>
+      </div>
     </>
   );
 }

@@ -1,25 +1,31 @@
-import { Box, ButtonGroup, Flex, IconButton, Text } from "@chakra-ui/react";
+import {
+  Box,
+  ButtonGroup,
+  Flex,
+  IconButton,
+  Spacer,
+  Text,
+} from "@chakra-ui/react";
 import React from "react";
 import { FaGithub, FaMedium, FaTwitter } from "react-icons/fa";
-
+import styles from "./Footer.module.css";
 const Footer = () => {
   return (
     <Flex
+      className={styles.footer}
       as="footer"
       direction="row"
       justifyContent="space-between"
       alignItems="center"
       fontWeight="thin"
       color="brand.0"
-      mt="2rem"
-      p="1.6rem"
     >
-      <Box>
+      <Box ml="3rem">
         <Text fontSize="sm">
           Copyright © {new Date().getFullYear()} 0xGreatApe inc.
         </Text>
       </Box>
-      <br />
+
       <Flex>
         <ButtonGroup variant="ghost" gap={4}>
           {/* ******** TWITTER ******** */}
@@ -49,17 +55,6 @@ const Footer = () => {
         </ButtonGroup>
       </Flex>
       <Flex>
-        <Box>
-          <Text fontSize="sm" fontWeight="thin">
-            <a
-              href="https://twitter.com/0xGreatApe"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Contact Support
-            </a>
-          </Text>
-        </Box>
         <Box ml="3rem">
           <Text fontSize="sm" fontWeight="thin">
             <a href=" " target="_blank" rel="noopener noreferrer">

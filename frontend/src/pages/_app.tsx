@@ -6,7 +6,8 @@ import { ChakraProvider } from "@chakra-ui/react";
 import {
   getDefaultWallets,
   RainbowKitProvider,
-  midnightTheme,
+  darkTheme,
+  DisclaimerComponent,
 } from "@rainbow-me/rainbowkit";
 import { configureChains, createClient, useAccount, WagmiConfig } from "wagmi";
 import { mainnet, goerli } from "wagmi/chains";
@@ -22,6 +23,15 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import { RainbowKitChain } from "@rainbow-me/rainbowkit/dist/components/RainbowKitProvider/RainbowKitChainContext";
+
+const Disclaimer: DisclaimerComponent = ({ Text, Link }) => (
+  <Text>
+    By connecting your wallet, you agree to the{" "}
+    <Link href="https://termsofservice.xyz">Terms of Service</Link> and
+    acknowledge you have read and understand the protocol{" "}
+    <Link href="https://disclaimer.xyz">Disclaimer</Link>
+  </Text>
+);
 
 const { chains, provider } = configureChains(
   [mainnet, goerli],
@@ -55,10 +65,13 @@ function MyApp({ Component, pageProps }) {
     <ChakraProvider theme={myTheme}>
       <WagmiConfig client={wagmiClient}>
         <RainbowKitProvider
-          theme={midnightTheme({
-            accentColor: "#1b98e0",
+          appInfo={{
+            appName: "Yamato Finance",
+            disclaimer: Disclaimer,
+          }}
+          theme={darkTheme({
+            accentColor: "#006494",
             accentColorForeground: "white",
-            borderRadius: "medium",
             fontStack: "rounded",
             overlayBlur: "small",
           })}

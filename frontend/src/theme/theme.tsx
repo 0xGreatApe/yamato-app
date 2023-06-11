@@ -5,7 +5,7 @@ const myTheme = extendTheme({
     brand: {
       0: "#fff", // White
       20: "#e8f1f2", // Light blue-gray
-      40: "#1b98e0", // Bright blue
+      40: "#1b98e0", // Bright blue 
       60: "#247ba0", // Dark blue
       70: "#006494", // Dark teal
       80: "#13293D", // Navy blue
