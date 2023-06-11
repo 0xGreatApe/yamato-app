@@ -1,15 +1,24 @@
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 2rem 4rem 0.8rem 4rem;
-    gap: 2rem;
-    margin-bottom: 4rem;
-  }
-  
-  .yamato_logo {
-    width: 6rem;
-    cursor: pointer;
-  }
-  
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6.4rem;
+  color: brand.0;
+  border-radius: 0.4rem;
+  overflow: hidden;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+  width: 100%;
+  padding: 2rem 0% 2rem 0rem;
+  gap: 2rem;
+}
+
+.logo-container {
+  width: 25rem;
+  flex-shrink: 0;
+}
+
+.yamato_logo {
+  width: 20rem;
+  cursor: pointer;
+}

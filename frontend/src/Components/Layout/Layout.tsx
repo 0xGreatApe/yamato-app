@@ -13,35 +13,30 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Yamato Voting</title>
       </Head>
+      {/* this is the whole screen background*/}
       <Flex
         flex="1 0"
-        bgGradient="linear(to-l, #04080e, #0b192a)"
+        bgColor="#13293d"
         bgSize="cover"
         bgRepeat="no-repeat"
         bgPosition="center-top"
         bgAttachment="fixed"
-        p="0 0 4rem"
+        p="0 0 4 0rem"
         zIndex="-1"
       >
         <Container>
           <Header />
-          <Flex
-            direction="column"
-            minH="85vh"
-            bgGradient="linear(to-l, #04080e, #0b192a)"
-          >
+          <Flex direction="column" minH="85vh" textAlign="center">
             <Box
-              bgGradient="linear(to-l, #04080e, #0b192a"
+              bg="transparent"
               backgroundSize="cover"
-              backgroundRepeat="no-repeat"
-              backgroundPosition="center-top"
               backgroundAttachment="fixed"
-              p="0 0 4rem"
+              p="0 0 4 0rem"
             >
               {children}
             </Box>
-            <Footer />
           </Flex>
+          <Footer />
         </Container>
       </Flex>
     </>

@@ -3,20 +3,20 @@ import { extendTheme } from "@chakra-ui/react";
 const myTheme = extendTheme({
   colors: {
     brand: {
-      0: "#fff",
-      20: "#ddd",
-      40: "#aaa",
-      60: "#313245",
-      70: "#262736",
-      80: "#000",
-      100: "#00cd74",
-      200: "#00b466",
-      250: "#1976d24d",
-      300: "#5865f2",
-      400: "#6441a5",
-      500: "#cd201f",
-      600: "#ff3860",
-      700: "#fe9d10",
+      0: "#fff", // White
+      20: "#e8f1f2", // Light blue-gray
+      40: "#1b98e0", // Bright blue
+      60: "#247ba0", // Dark blue
+      70: "#006494", // Dark teal
+      80: "#13293D", // Navy blue
+      100: "#ff3860", // Bright pink
+      200: "#cd201f", // Red
+      250: "#ff0000", // Red (augmented)
+      300: "#00b466", // Green
+      400: "#00cd74", // Bright green
+      500: "#6441a5", // Purple
+      600: "#fe9d10", // Orange
+      700: "#000", // Black
     },
   },
   fonts: {

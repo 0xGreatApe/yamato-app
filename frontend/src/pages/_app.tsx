@@ -12,7 +12,7 @@ import { configureChains, createClient, useAccount, WagmiConfig } from "wagmi";
 import { mainnet, goerli } from "wagmi/chains";
 import { alchemyProvider } from "wagmi/providers/alchemy";
 import { publicProvider } from "wagmi/providers/public";
-import MainLayout from "../layout/mainLayout";
+//import MainLayout from "../layout/mainLayout";
 import { useRouter } from "next/router";
 
 import myTheme from "../theme/theme";
@@ -21,6 +21,7 @@ import myTheme from "../theme/theme";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
+import { RainbowKitChain } from "@rainbow-me/rainbowkit/dist/components/RainbowKitProvider/RainbowKitChainContext";
 
 const { chains, provider } = configureChains(
   [mainnet, goerli],
@@ -42,6 +43,9 @@ export { WagmiConfig, RainbowKitProvider };
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
+  const initialChain: number | RainbowKitChain = parseInt(
+    process.env.NEXT_PUBLIC_DEFAULT_CHAIN
+  );
   const account = useAccount({
     onConnect({ address, connector, isReconnected }) {
       if (!isReconnected) router.reload();
@@ -52,19 +56,17 @@ function MyApp({ Component, pageProps }) {
       <WagmiConfig client={wagmiClient}>
         <RainbowKitProvider
           theme={midnightTheme({
-            accentColor: "#006494",
+            accentColor: "#1b98e0",
             accentColorForeground: "white",
-            borderRadius: "large",
-            fontStack: "system",
+            borderRadius: "medium",
+            fontStack: "rounded",
             overlayBlur: "small",
           })}
           modalSize="wide"
-          initialChain={process.env.NEXT_PUBLIC_DEFAULT_CHAIN}
+          initialChain={parseInt(process.env.NEXT_PUBLIC_DEFAULT_CHAIN)}
           chains={chains}
         >
-          <MainLayout>
-            <Component {...pageProps} />
-          </MainLayout>
+          <Component {...pageProps} />
         </RainbowKitProvider>
       </WagmiConfig>
     </ChakraProvider>
@@ -72,3 +74,8 @@ function MyApp({ Component, pageProps }) {
 }
 
 export default MyApp;
+{
+  /* <MainLayout>
+<Component {...pageProps} />
+</MainLayout> */
+}

@@ -1,0 +1,30 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  /* background-color: var(--secondaryDark); */
+  padding: 1.6rem;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: var(--white);
+    /* background-color: var(--secondaryDark); */
+    padding: 1.6rem;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+  }
+}
+
+/* .contact {
+    this isn't used anywhere
+  } */
