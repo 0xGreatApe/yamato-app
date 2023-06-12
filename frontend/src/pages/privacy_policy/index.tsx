@@ -1,25 +1,15 @@
 //import styles from "../styles/Home.module.css";
 import Layout from "../../Components/Layout/Layout";
 import Head from "next/head";
-import {
-  Flex,
-  Heading,
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Grid,
-  GridItem,
-} from "@chakra-ui/react";
+import { Flex, Heading, theme } from "@chakra-ui/react";
+import { NextPage } from "next";
 
-import type { NextPage } from "next";
-
-const Vote: NextPage = () => {
+const privacy_policy: NextPage = () => {
   return (
     <>
       <Layout>
         <Head>
-          <title>Yamato Finance</title>
+        <title>Yamato Finance</title>
           {/* <meta name="description" content="noindex,nofollow" /> */}
         </Head>
         <Flex justifyContent="center">
@@ -33,17 +23,15 @@ const Vote: NextPage = () => {
             mb="1rem"
             textAlign="center"
           >
-            Vote for your Proposal
+            Mint Tokens
           </Heading>
-
         </Flex>
       </Layout>
     </>
   );
 };
 
-export default Vote;
-
+export default privacy_policy;
 // <div>
 //   <main className={styles.main}>
 //     <InstructionsComponent></InstructionsComponent>

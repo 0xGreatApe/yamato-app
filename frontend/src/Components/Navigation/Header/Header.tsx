@@ -40,7 +40,6 @@ export default function Header() {
     <Flex
       as="nav"
       minWidth="max-content"
-      gap="2"
       className={styles.header}
       style={{
         backgroundColor,
@@ -48,9 +47,8 @@ export default function Header() {
       }}
     >
       <Link href="/" shallow>
-        <Box className={styles.logo_container}>
+        <Box className={styles.yamato_logo}>
           <Image
-            className={styles.yamato_logo}
             src="yamato_logo_light.svg"
             alt="Yamato Logo"
             width={2000}
@@ -59,7 +57,7 @@ export default function Header() {
         </Box>
       </Link>
       <Spacer></Spacer>
-      <ButtonGroup variant="ghost" gap="2">
+      <ButtonGroup className={styles.nav_menu} variant="ghost" gap="2">
         <Link href="/mint" shallow>
           <Button
             color="brand.0"
@@ -117,18 +115,19 @@ export default function Header() {
           </Button>
         </Link>
       </ButtonGroup>
-      <Spacer />
-      <Spacer />
-      <ConnectButton
-        showBalance={{
-          smallScreen: false,
-          largeScreen: true,
-        }}
-        accountStatus={{
-          smallScreen: "avatar",
-          largeScreen: "full",
-        }}
-      />
+      <Spacer></Spacer>
+      <Flex className={styles.connect}>
+        <ConnectButton
+          showBalance={{
+            smallScreen: false,
+            largeScreen: true,
+          }}
+          accountStatus={{
+            smallScreen: "avatar",
+            largeScreen: "full",
+          }}
+        />
+      </Flex>
     </Flex>
   );
 }

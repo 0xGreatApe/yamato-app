@@ -4,27 +4,42 @@
   justify-content: center;
   align-items: center;
   color: var(--white);
-  /* background-color: var(--secondaryDark); */
   padding: 1.6rem;
   position: fixed;
   bottom: 0px;
   left: 0px;
   right: 0px;
-
-  @media screen and (min-width: 768px) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    color: var(--white);
-    /* background-color: var(--secondaryDark); */
-    padding: 2rem 12rem 2rem 12rem;
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-  }
 }
 
-/* .contact {
-    this isn't used anywhere
-  } */
+.footer .copyright,
+.footer .social-buttons,
+.footer .legal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+    padding: 2rem 12rem 2rem 12rem;
+  }
+
+  .footer .copyright {
+    justify-content: flex-start;
+  }
+
+  .footer .social-buttons {
+    margin: 0;
+  }
+
+  .footer .legal {
+    justify-content: flex-end;
+  }
+
+  .footer .legal a {
+    margin-left: 3rem;
+  }
+}

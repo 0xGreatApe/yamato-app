@@ -1,20 +1,10 @@
 //import styles from "../styles/Home.module.css";
 import Layout from "../../Components/Layout/Layout";
 import Head from "next/head";
-import {
-  Flex,
-  Heading,
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Grid,
-  GridItem,
-} from "@chakra-ui/react";
+import { Flex, Heading, theme } from "@chakra-ui/react";
+import { NextPage } from "next";
 
-import type { NextPage } from "next";
-
-const Vote: NextPage = () => {
+const terms_and_conditions: NextPage = () => {
   return (
     <>
       <Layout>
@@ -33,17 +23,15 @@ const Vote: NextPage = () => {
             mb="1rem"
             textAlign="center"
           >
-            Vote for your Proposal
+            Mint Tokens
           </Heading>
-
         </Flex>
       </Layout>
     </>
   );
 };
 
-export default Vote;
-
+export default terms_and_conditions;
 // <div>
 //   <main className={styles.main}>
 //     <InstructionsComponent></InstructionsComponent>
