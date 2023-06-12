@@ -3,8 +3,6 @@ import Layout from "../Components/Layout/Layout";
 import Head from "next/head";
 import {
   Flex,
-  Card,
-  CardBody,
   Image,
   Stack,
   Heading,
@@ -51,19 +49,17 @@ export default function Home() {
               Mint Yamato Tokens
             </Heading>
             <Text fontSize="sm" color="brand.20">
-              Mint the Governance token Yamato which is used to Vote for
-              proposals
+              Mint Yamato governance token to participate in voting
             </Text>
           </ExpandableBox>
 
           <ExpandableBox href="/vote">
             <Image src="/Vote.svg" alt="Vote" borderRadius="lg" />
             <Heading color="brand.20" size="md">
-              Vote New Proposals
+              Vote on Proposals
             </Heading>
-            <Text color="brand.20">
-              Vote or Delegate your voting Power to other users to Vote within
-              the ecosystem
+            <Text fontSize="sm" color="brand.20">
+              Vote or Delegate your voting Power to other users
             </Text>
           </ExpandableBox>
 
@@ -76,9 +72,8 @@ export default function Home() {
             <Heading color="brand.20" size="md">
               Create Proposals
             </Heading>
-            <Text color="brand.20">
-              Vote or Delegate your voting Power to other users to Vote within
-              the ecosystem
+            <Text fontSize="sm" color="brand.20">
+              Create new proposals for the community to vote on
             </Text>
           </ExpandableBox>
 
@@ -87,12 +82,14 @@ export default function Home() {
             <Heading color="brand.20" size="md">
               Comprehensive Docs
             </Heading>
-            <Text color="brand.20">
+            <Text fontSize="sm" color="brand.20">
               Review the comprehensive docs on how to setup and use this
               platform.
             </Text>
           </ExpandableBox>
         </SimpleGrid>
+
+        
       </Layout>
     </>
   );

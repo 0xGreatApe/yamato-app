@@ -1,11 +1,5 @@
 .flex_background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   z-index: -1;
   background-color: #13293d;
   background-size: cover;
-  /* overflow-x: scroll; */
 }
