@@ -41,7 +41,7 @@ export default function Home() {
         </Flex>
         <SimpleGrid
           spacing={20}
-          minChildWidth="120px"
+          minChildWidth="140px"
           justifyItems="center"
           alignItems="center"
         >
@@ -50,7 +50,7 @@ export default function Home() {
             <Heading color="brand.20" size="md">
               Mint Yamato Tokens
             </Heading>
-            <Text color="brand.20">
+            <Text fontSize="sm" color="brand.20">
               Mint the Governance token Yamato which is used to Vote for
               proposals
             </Text>

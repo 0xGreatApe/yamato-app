@@ -23,7 +23,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               bg="transparent"
               backgroundSize="cover"
               backgroundAttachment="fixed"
-              p="0 0 4 0rem"
+               
             >
               {children}
             </Box>
