@@ -1,19 +1,9 @@
-import styles from "../styles/Home.module.css";
 import Layout from "../Components/Layout/Layout";
 import Head from "next/head";
-import {
-  Flex,
-  Image,
-  Stack,
-  Heading,
-  Text,
-  Divider,
-  Box,
-  ButtonGroup,
-  Button,
-  SimpleGrid,
-} from "@chakra-ui/react";
-import ExpandableBox from "Components/ExpandableBox/ExpandableBox";
+import { Flex, Image, Heading, Text, Box, SimpleGrid } from "@chakra-ui/react";
+import CardButton from "Components/CardButton/CardButton";
+import styles from "../styles/Home.module.css";
+import DarkBackground from "Components/DarkBackground/DarkBackground";
 
 export default function Home() {
   return (
@@ -21,49 +11,32 @@ export default function Home() {
       <Layout>
         <Head>
           <title>Yamato Finance</title>
-          {/* <meta name="description" content="noindex,nofollow" /> */}
         </Head>
-        <Flex justifyContent="center">
-          <Heading
-            as="h2"
-            fontSize="5rem"
-            color="brand.0"
-            fontWeight="medium"
-            size="lg"
-            p="2rem"
-            mb="1rem"
-            textAlign="center"
-          >
-            Decentralised Voting for the Future
-          </Heading>
-        </Flex>
-        <SimpleGrid
-          spacing={20}
-          minChildWidth="140px"
-          justifyItems="center"
-          alignItems="center"
-        >
-          <ExpandableBox href="/mint">
-            <Image src="/Mint.svg" alt="Mint Yamato Tokens" borderRadius="lg" />
+        <Heading className={styles.heading} fontSize="5rem" color="brand.20">
+          Decentralised Voting for the Future
+        </Heading>
+        <SimpleGrid className={styles.simpleGrid} minChildWidth="140px">
+          <CardButton href="/mint">
+            <Image src="/Mint.svg" alt="Mint Yamato Tokens" />
             <Heading color="brand.20" size="md">
               Mint Yamato Tokens
             </Heading>
             <Text fontSize="sm" color="brand.20">
               Mint Yamato governance token to participate in voting
             </Text>
-          </ExpandableBox>
+          </CardButton>
 
-          <ExpandableBox href="/vote">
-            <Image src="/Vote.svg" alt="Vote" borderRadius="lg" />
+          <CardButton href="/vote">
+            <Image src="/Vote.svg" alt="Vote" />
             <Heading color="brand.20" size="md">
               Vote on Proposals
             </Heading>
             <Text fontSize="sm" color="brand.20">
               Vote or Delegate your voting Power to other users
             </Text>
-          </ExpandableBox>
+          </CardButton>
 
-          <ExpandableBox href="/proposals">
+          <CardButton href="/proposals">
             <Image
               src="/Proposals.svg"
               alt="proposals image"
@@ -75,10 +48,10 @@ export default function Home() {
             <Text fontSize="sm" color="brand.20">
               Create new proposals for the community to vote on
             </Text>
-          </ExpandableBox>
+          </CardButton>
 
-          <ExpandableBox href="/docs">
-            <Image src="/Docs.svg" alt="Docs Image" borderRadius="lg" />
+          <CardButton href="/docs">
+            <Image src="/Docs.svg" alt="Docs Image" />
             <Heading color="brand.20" size="md">
               Comprehensive Docs
             </Heading>
@@ -86,16 +59,59 @@ export default function Home() {
               Review the comprehensive docs on how to setup and use this
               platform.
             </Text>
-          </ExpandableBox>
+          </CardButton>
         </SimpleGrid>
+        <Flex className={styles.flexContainer}>
+          <DarkBackground>
+            <Box borderWidth="1px" borderRadius="lg" overflow="hidden" p={4}>
+              <Flex flexDirection={["column", "row"]} mt={4} alignItems="start">
+                <Box mr={8}>
+                  <Image
+                    className={styles.image}
+                    src="yamato-icon.svg"
+                    alt="Yamato Logo"
+                    width={200}
+                    height={200}
+                  />
+                </Box>
+                <Flex
+                  flexDirection="column"
+                  alignItems="center"
+                  mb={4}
+                  width="80%"
+                >
+                  <Heading
+                    className={styles.heading1}
+                    fontWeight="bold"
+                    color="brand.20"
+                  >
+                    YAMATO TOKEN STATS
+                  </Heading>
 
-        
+                  <Box flex="1" mt={4} width="100%">
+                    <Flex justifyContent="space-around">
+                      <Box textAlign="center">
+                        <Text className={styles.heading2}>Tokens Minted</Text>
+                        <Text className={styles.body}>3000</Text>
+                      </Box>
+
+                      <Box textAlign="center">
+                        <Text className={styles.heading2}>Total Proposals</Text>
+                        <Text className={styles.body}>5</Text>
+                      </Box>
+
+                      <Box textAlign="center">
+                        <Text className={styles.heading2}>Votes Cast</Text>
+                        <Text className={styles.body}>10000</Text>
+                      </Box>
+                    </Flex>
+                  </Box>
+                </Flex>
+              </Flex>
+            </Box>
+          </DarkBackground>
+        </Flex>
       </Layout>
     </>
   );
 }
-// <div>
-//   <main className={styles.main}>
-//     <InstructionsComponent></InstructionsComponent>
-//   </main>
-// </div>

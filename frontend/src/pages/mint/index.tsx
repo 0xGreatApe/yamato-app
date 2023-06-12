@@ -31,9 +31,4 @@ const Mint: NextPage = () => {
   );
 };
 
-export default Mint;
-// <div>
-//   <main className={styles.main}>
-//     <InstructionsComponent></InstructionsComponent>
-//   </main>
-// </div>
+export default Mint; 

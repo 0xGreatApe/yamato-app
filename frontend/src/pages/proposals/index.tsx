@@ -8,7 +8,7 @@ export default function Proposals() {
     <>
       <Layout>
         <Head>
-        <title>Yamato Finance</title>
+          <title>Yamato Finance</title>
           {/* <meta name="description" content="noindex,nofollow" /> */}
         </Head>
         <Flex justifyContent="center">
@@ -29,8 +29,3 @@ export default function Proposals() {
     </>
   );
 }
-// <div>
-//   <main className={styles.main}>
-//     <InstructionsComponent></InstructionsComponent>
-//   </main>
-// </div>

@@ -1,9 +1,60 @@
-
 .main {
-	padding: 2rem 0;
-	flex: 1;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+  padding: 2rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexContainer {
+  padding: 10rem 0rem 4rem 0rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
+
+.heading {
+  font-size: 40px;
+  font-weight: 400;
+  padding: 8rem 0rem 8rem 0rem;
+  text-align: center;
+}
+
+.heading1 {
+	font-size: 40px;
+	font-weight: 400;
+	padding: 0rem 0rem 2rem 0rem;
+	text-align: center;
+  }
+  
+
+.heading2 {
+  color: #e8f1f2;
+  font-size: 30px;
+  font-weight: 400;
+  padding: 0rem 0rem 2rem 0rem;
+  text-align: center;
+}
+
+.flexContainerHeading {
+  justify-items: center;
+  align-items: center;
+}
+
+.body {
+  color: #1b98e0;
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+
+.image {
+  margin-left: 5rem;
+  align-items: center;
+}
+.simpleGrid {
+  gap: 30px;
+  justify-items: center;
+  align-items: center;
 }

@@ -101,7 +101,12 @@ export default function Header() {
           </Button>
         </Link>
 
-        <Link href="/docs" shallow>
+        <Link
+          href="https://github.com/0xGreatApe/yamato-app"
+          target="_blank"
+          rel="noopener noreferrer"
+          shallow
+        >
           <Button
             color="brand.0"
             _hover={{

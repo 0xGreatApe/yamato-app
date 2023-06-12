@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
-import styles from "./ExpandableBox.module.css";
+import styles from "./CardButton.module.css";
 import { Box } from "@chakra-ui/react";
 
-const ExpandableBox = ({ children, href }) => {
+const CardButton = ({ children, href }) => {
   return (
     <motion.div
       whileHover={{ scale: 1.05 }}
@@ -11,7 +11,7 @@ const ExpandableBox = ({ children, href }) => {
       transition={{ duration: 0.2 }}
     >
       <Link href={href} passHref>
-        <Box className={styles.expandableBox} bg="brand.100">
+        <Box className={styles.cardButton} bg="brand.100">
           {children}
         </Box>
       </Link>
@@ -19,4 +19,4 @@ const ExpandableBox = ({ children, href }) => {
   );
 };
 
-export default ExpandableBox;
+export default CardButton;
