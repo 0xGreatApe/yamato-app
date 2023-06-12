@@ -63,7 +63,7 @@ export default function Home() {
         </SimpleGrid>
         <Flex className={styles.flexContainer}>
           <DarkBackground>
-            <Box borderWidth="1px" borderRadius="lg" overflow="hidden" p={4}>
+            <Box overflow="hidden" p={4}>
               <Flex flexDirection={["column", "row"]} mt={4} alignItems="start">
                 <Box mr={8}>
                   <Image
