@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "theme": "chakra-cli tokens src/theme/theme.tsx",
+    "theme:watch": "chakra-cli tokens src/theme/theme.tsx --watch"
   },
   "dependencies": {
     "@chakra-ui/next-js": "^2.1.4",
@@ -28,6 +30,7 @@
     "wagmi": "^0.12.6"
   },
   "devDependencies": {
+    "@chakra-ui/cli": "^2.4.1",
     "@svgr/webpack": "5.5.0",
     "@types/node": "17.0.23",
     "@types/react": "18.0.0",

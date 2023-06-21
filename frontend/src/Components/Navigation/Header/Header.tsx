@@ -43,7 +43,7 @@ export default function Header() {
       className={styles.header}
       style={{
         backgroundColor,
-        borderBottom: scrolled ? "1px solid #e8f1f2" : "none",
+        borderBottom: scrolled ? "1px solid #1b98e0" : "none",
       }}
     >
       <Link href="/" shallow>

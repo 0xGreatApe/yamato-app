@@ -4,15 +4,33 @@ import { Flex, Image, Heading, Text, Box, SimpleGrid } from "@chakra-ui/react";
 import CardButton from "Components/CardButton/CardButton";
 import styles from "../styles/Home.module.css";
 import DarkBackground from "Components/DarkBackground/DarkBackground";
+import { tokenService } from "./api/tokenService";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [totalSupply, setTotalSupply] = useState(null);
+  const [error, setError] = useState("");
+
+  const fetchTotalSupply = async () => {
+    try {
+      const data = await tokenService.getTotalSupply();
+      setTotalSupply(data);
+    } catch (error) {
+      setError("Error fetching total supply.");
+    }
+  };
+
+  useEffect(() => {
+    fetchTotalSupply();
+  }, []);
+
   return (
     <>
       <Layout>
         <Head>
           <title>Yamato Finance</title>
         </Head>
-        <Heading className={styles.heading} fontSize="5rem" color="brand.20">
+        <Heading className="heading" fontSize="5rem" color="brand.20">
           Decentralised Voting for the Future
         </Heading>
         <SimpleGrid className={styles.simpleGrid} minChildWidth="140px">
@@ -50,7 +68,7 @@ export default function Home() {
             </Text>
           </CardButton>
 
-          <CardButton href="/docs">
+          <CardButton href="https://github.com/0xGreatApe/yamato-app">
             <Image src="/Docs.svg" alt="Docs Image" />
             <Heading color="brand.20" size="md">
               Comprehensive Docs
@@ -91,18 +109,21 @@ export default function Home() {
                   <Box flex="1" mt={4} width="100%">
                     <Flex justifyContent="space-around">
                       <Box textAlign="center">
-                        <Text className={styles.heading2}>Tokens Minted</Text>
-                        <Text className={styles.body}>3000</Text>
+                        <Text className="heading2">Tokens Minted</Text>
+                        <Text className="body">
+                          {totalSupply && <p> {totalSupply}</p>}
+                          {error && <p>Error: {error}</p>}
+                        </Text>
                       </Box>
 
                       <Box textAlign="center">
-                        <Text className={styles.heading2}>Total Proposals</Text>
-                        <Text className={styles.body}>5</Text>
+                        <Text className="heading2">Total Proposals</Text>
+                        <Text className="body">5</Text>
                       </Box>
 
                       <Box textAlign="center">
-                        <Text className={styles.heading2}>Votes Cast</Text>
-                        <Text className={styles.body}>10000</Text>
+                        <Text className="heading2">Votes Cast</Text>
+                        <Text className="body">400</Text>
                       </Box>
                     </Flex>
                   </Box>

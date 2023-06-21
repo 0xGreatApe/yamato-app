@@ -1,11 +1,13 @@
 import { extendTheme } from "@chakra-ui/react";
-
+import { inputTheme } from "../Components/Input/Index";
+import { buttonStyles as Button } from "./Components/buttonStyles";
+import { spinnerStyles as Spinner } from "./Components/spinnerStyles";
 const myTheme = extendTheme({
   colors: {
     brand: {
       0: "#fff", // White
-      20: "#e8f1f2", // Light blue-gray 
-      40: "#1b98e0", // Bright blue 
+      20: "#e8f1f2", // Light blue-gray
+      40: "#1b98e0", // Bright blue
       60: "#247ba0", // Dark blue
       70: "#006494", // Dark teal
       80: "#13293D", // Navy blue
@@ -64,6 +66,7 @@ const myTheme = extendTheme({
     lg: "62em",
     xl: "80em",
   },
+  components: { NumberInput: inputTheme, Button, Spinner },
 });
 
 export default myTheme;

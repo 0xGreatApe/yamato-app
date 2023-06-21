@@ -44,37 +44,37 @@ const privacy_policy: NextPage = () => {
           margin="0 auto"
         >
           {/* ... (previous text) ... */}
-          <Heading className={styles.header2}>Business Transactions</Heading>
-          <Text className={styles.body}>Last updated: June 12, 2023</Text>
-          <Text className={styles.body}>
+          <Heading className="header2">Business Transactions</Heading>
+          <Text className="body">Last updated: June 12, 2023</Text>
+          <Text className="body">
             This Privacy Policy describes Our policies and procedures on the
             collection, use and disclosure of Your information when You use the
             Service and tells You about Your privacy rights and how the law
             protects You.
           </Text>
-          <Text className={styles.body}>
+          <Text className="body">
             We don't use your Personal data to provide and improve the Service.
             By using the Service, You agree to the collection and use of
             information in accordance with this Privacy Policy. This Privacy
             Policy has been created with the help of the Free Privacy Policy
             Generator.
           </Text>
-          <Heading className={styles.header1}>
+          <Heading className="header1">
             Interpretation and Definitionst
           </Heading>
-          <Heading className={styles.header2}>Interpretation</Heading>
-          <Text className={styles.body}>
+          <Heading className="header2">Interpretation</Heading>
+          <Text className="body">
             The words of which the initial letter is capitalized have meanings
             defined under the following conditions. The following definitions
             shall have the same meaning regardless of whether they appear in
             singular or in plural.
           </Text>
-          <Heading className={styles.header2}>Definitions</Heading>
-          <Heading className={styles.header2}>Other Legal Requirements</Heading>
-          <Text className={styles.body}>
+          <Heading className="header2">Definitions</Heading>
+          <Heading className="header2">Other Legal Requirements</Heading>
+          <Text className="body">
             For the purposes of this Privacy Policy:
           </Text>
-          <UnorderedList className={styles.body}>
+          <UnorderedList className="body">
             <ListItem>
               Account means a unique account created for You to access our
               Service or parts of our Service.
@@ -129,29 +129,29 @@ const privacy_policy: NextPage = () => {
             </ListItem>
           </UnorderedList>
           {/* ... (remaining text) ... */}
-          <Heading className={styles.header1}>
+          <Heading className="header1">
             Collecting and Using Your Personal Data
           </Heading>
-          <Heading className={styles.header2}>Types of Data Collected</Heading>
-          <Heading className={styles.header3}>Personal Data</Heading>
-          <Text className={styles.body}>
+          <Heading className="header2">Types of Data Collected</Heading>
+          <Heading className="header3">Personal Data</Heading>
+          <Text className="body">
             While using Our Service, We may ask You to provide Us with certain
             personally identifiable information that can be used to contact or
             identify You. Personally identifiable information may include, but
             is not limited to: Usage Data.
           </Text>
-          <Heading className={styles.header3}>Usage Data</Heading>
-          <Text className={styles.body}>
+          <Heading className="header3">Usage Data</Heading>
+          <Text className="body">
             Usage Data is collected automatically when using the Service.
           </Text>
-          <Text className={styles.body}>
+          <Text className="body">
             Usage Data may include information such as Your Device's Internet
             Protocol address (e.g. IP address), browser type, browser version,
             the pages of our Service that You visit, the time and date of Your
             visit, the time spent on those pages, unique device identifiers and
             other diagnostic data.
           </Text>
-          <Text className={styles.body}>
+          <Text className="body">
             When You access the Service by or through a mobile device, We may
             collect certain information automatically, including, but not
             limited to, the type of mobile device You use, Your mobile device
@@ -159,22 +159,22 @@ const privacy_policy: NextPage = () => {
             operating system, the type of mobile Internet browser You use,
             unique device identifiers and other diagnostic data.
           </Text>
-          <Text className={styles.body}>
+          <Text className="body">
             We may also collect information that Your browser sends whenever You
             visit our Service or when You access the Service by or through a
             mobile device.
           </Text>
-          <Heading className={styles.header1}>
+          <Heading className="header1">
             Tracking Technologies and Cookies
           </Heading>
-          <Text className={styles.body}>
+          <Text className="body">
             We use Cookies and similar tracking technologies to track the
             activity on Our Service and store certain information. Tracking
             technologies used are beacons, tags, and scripts to collect and
             track information and to improve and analyze Our Service. The
             technologies We use may include:
           </Text>{" "}
-          <UnorderedList className={styles.body}>
+          <UnorderedList className="body">
             <ListItem>
               <strong>Cookies or Browser Cookies.</strong> A cookie is a small
               file placed on Your Device. You can instruct Your browser to
@@ -194,19 +194,19 @@ const privacy_policy: NextPage = () => {
               certain section and verifying system and server integrity).
             </ListItem>
           </UnorderedList>
-          <Heading className={styles.header2}>
+          <Heading className="header2">
             Changes to this Privacy Policy
           </Heading>
-          <Text className={styles.body}>
+          <Text className="body">
             We may update Our Privacy Policy from time to time. We will notify
             You of any changes by posting the new Privacy Policy on this page.
           </Text>
           {/* ... (remaining text) ... */}
-          <Text className={styles.body}>
+          <Text className="body">
             If you have any questions about this Privacy Policy, You can contact
             us:
           </Text>
-          <Text className={styles.body}>
+          <Text className="body">
             By visiting this page on our website:{" "}
             <a href="https:///github.com/0xgreatApe" className={styles.link}>
               https:///github.com/0xgreatApe

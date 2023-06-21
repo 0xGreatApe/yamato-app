@@ -11,7 +11,7 @@ import {
 } from "@rainbow-me/rainbowkit";
 import { configureChains, createClient, useAccount, WagmiConfig } from "wagmi";
 import { mainnet, goerli } from "wagmi/chains";
-import { alchemyProvider } from "wagmi/providers/alchemy";
+import { infuraProvider } from "wagmi/providers/infura";
 import { publicProvider } from "wagmi/providers/public";
 //import MainLayout from "../layout/mainLayout";
 import { useRouter } from "next/router";
@@ -22,6 +22,7 @@ import myTheme from "../theme/theme";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
+import "../styles/globals.css";
 import { RainbowKitChain } from "@rainbow-me/rainbowkit/dist/components/RainbowKitProvider/RainbowKitChainContext";
 
 const Disclaimer: DisclaimerComponent = ({ Text, Link }) => (
@@ -35,11 +36,11 @@ const Disclaimer: DisclaimerComponent = ({ Text, Link }) => (
 
 const { chains, provider } = configureChains(
   [mainnet, goerli],
-  [alchemyProvider({ apiKey: process.env.ALCHEMY_API_KEY }), publicProvider()]
+  [infuraProvider({ apiKey: process.env.INFURA_API_KEY }), publicProvider()]
 );
 
 const { connectors } = getDefaultWallets({
-  appName: "Yamato",
+  appName: "Yamato App",
   chains,
 });
 
@@ -49,7 +50,7 @@ const wagmiClient = createClient({
   provider,
 });
 
-export { WagmiConfig, RainbowKitProvider };
+// export { WagmiConfig, RainbowKitProvider };
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
